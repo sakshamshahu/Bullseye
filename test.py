@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 capture = cv.VideoCapture(0)
-
+# cv.resizeWindow(capture, 500, 500)
 while True:
     ret, frame = capture.read()
     width = int(capture.get(3))
@@ -42,7 +42,9 @@ while True:
 
     # cv.imshow('Frame' , mask)
     # cv.imshow('Frame' , resulting_image)
-    
+    cv.namedWindow("Frame2", cv.WND_PROP_FULLSCREEN)
+    cv.setWindowProperty("Frame2", cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+
     cv.imshow('Frame2' , frame)
     if cv.waitKey(1) == ord('x'):
         capture.release()
