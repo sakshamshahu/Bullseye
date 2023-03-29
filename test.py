@@ -36,8 +36,8 @@ while True:
                                        (x + w, y + h), 
                                        (0, 0, 255) , 2)
               
-            cv.putText(frame, "RED", (x, y),
-                        cv.FONT_HERSHEY_SIMPLEX, 1.0,
+            cv.putText(frame, "I see red!!", (x, y),
+                        cv.FONT_HERSHEY_TRIPLEX, 1.0,
                         (0, 0, 255)) 
 
     # cv.imshow('Frame' , mask)
